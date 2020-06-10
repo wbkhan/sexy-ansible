@@ -1,9 +1,9 @@
 [frontends] 
-frontend1 ansible_host=frontend1.{{GUID}}.internal
+frontend1 ansible_host=frontend1.1c82.internal
 
 [apps] 
-app1 ansible_host=app1.{{GUID}}.internal
-app2 ansible_host=app2.{{GUID}}.internal
+app1 ansible_host=app1.1c82.internal
+app2 ansible_host=app2.1c82.internal
 
 [appdbs] 
 appdb1 ansible_host=appdb1.1c82.internal
