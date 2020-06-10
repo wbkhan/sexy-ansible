@@ -1,0 +1,19 @@
+---
+- name: Sexy Configuration of Three Tier APP ;)
+  hosts: all
+  become: True
+  gather_facts: false   # Speeds up the execution
+  roles:
+
+    - role: haproxy
+      when: inventory_hostname in groups['frontends']
+      
+    - role: apache
+      when: inventory_hostname in groups['apps']
+
+    - role: tomcat
+      when: inventory_hostname in groups['apps']
+
+    - role: postgresql
+      when: inventory_hostname in groups['appdbs']
+
